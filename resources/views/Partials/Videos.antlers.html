@@ -1,0 +1,27 @@
+  <!-- Block Start -->
+
+
+   <div class="h-screen w-full bg-black grid content-center p-30">
+  <div class="grid grid-cols-1 md:grid-cols-2 w-full gap-0">
+    {{ video_field }}
+        <div>
+      {{ if video_file }}
+        {{ video_file }}
+          <video class="aspect-video w-full" controls>
+            <source src="{{ url }}" type="{{ mime_type }}">
+            Your browser does not support the video tag.
+          </video>
+        {{ /video_file }}
+      {{ elseif video_url && (video_url | is_embeddable) }}
+        <iframe
+          class="aspect-video w-full"
+          src="{{ video_url | embed_url }}"
+          allowfullscreen>
+        </iframe>
+      {{ /if }}
+        </div>
+    {{ /video_field }}
+  </div>
+</div>
+
+  <!-- Block End -->

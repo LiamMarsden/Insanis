@@ -13,14 +13,6 @@ fields:
               display: 'New Set'
               fields:
                 -
-                  handle: image
-                  field:
-                    max_files: 1
-                    min_files: 1
-                    container: assets
-                    type: assets
-                    display: Image
-                -
                   handle: header
                   field:
                     type: text
@@ -30,8 +22,3 @@ fields:
                   field:
                     type: textarea
                     display: 'Body Copy'
-                -
-                  handle: cta
-                  field:
-                    type: text
-                    display: CTA

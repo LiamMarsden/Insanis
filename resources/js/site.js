@@ -148,3 +148,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Header Transparent End
+
+document.querySelectorAll('.alt-glyph-auto').forEach(el => {
+  el.innerHTML = el.innerHTML.replace(/W/g, '<span class="alt-glyph">W</span>');
+});

@@ -14,45 +14,25 @@ tabs:
               validate:
                 - required
       -
-        display: 'Banner Video'
+        display: 'Hero Text'
         fields:
           -
-            import: banner_video
-      -
-        display: 'Banner One'
-        fields:
-          -
-            import: banner_one
-      -
-        display: 'Banner Two'
-        fields:
-          -
-            import: banner_two
-      -
-        display: 'Banner Three'
-        fields:
-          -
-            import: banner_three
+            import: textcentered
       -
         display: Cards
         fields:
           -
             import: cards
       -
-        display: Gallery
+        display: 'Block 1'
         fields:
           -
-            import: gallery
+            import: block_1
       -
-        display: Testimonials
+        display: Video
         fields:
           -
-            import: testimonials
-      -
-        display: Accordion
-        fields:
-          -
-            import: accordion
+            import: video
   sidebar:
     display: Sidebar
     sections:

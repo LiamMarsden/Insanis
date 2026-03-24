@@ -1,0 +1,19 @@
+title: TextCentered
+fields:
+  -
+    handle: hero_text_field
+    field:
+      type: replicator
+      display: hero_text_field
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: hero_text
+                  field:
+                    type: textarea
+                    display: 'Hero Text'

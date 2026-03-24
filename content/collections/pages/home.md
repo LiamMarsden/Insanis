@@ -18,7 +18,7 @@ accordion_set:
     type: accordion_set
     enabled: true
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1757156286
+updated_at: 1774172851
 b1_image: 'Asset 1.png'
 b1_header: 'Banner one Header'
 b1_body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -35,24 +35,23 @@ card_field:
   -
     id: mf7n3foz
     image: asset-4.png
-    header: 'Card 1'
-    body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
-    cta: About
+    header: 'clarity first'
+    body_copy: 'We interrogate the problem until the position is undeniable.'
     type: new_set
     enabled: true
   -
     id: mf7n3vqy
     image: 'Asset 5.png'
-    header: 'Card 2'
-    body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    header: 'ideas  that move'
+    body_copy: 'Creative built to move behaviour and shift markets.'
     cta: About
     type: new_set
     enabled: true
   -
     id: mf7n49a2
     image: 'Asset 6.png'
-    header: 'Card 3'
-    body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+    header: 'built  to last'
+    body_copy: 'Work that holds its shape long after launch.'
     cta: About
     type: new_set
     enabled: true
@@ -154,11 +153,47 @@ banner_two:
 banner_three:
   b3_header: 'B3 Header'
   b3_body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
-  b3_image: img1.png
   b3_cta: 'b3 cat'
+  b3_image: img1.png
 gallery_header: 'Gallery header'
 gallery_body_copy: 'Body Boy gallery'
 banner_video: 'https://www.youtube.com/watch?v=lPG6PdfpUlY'
+hero_text: 'when it matters.'
+hero_text_field:
+  -
+    id: mn1hq8q2
+    hero_text: 'when it matters.'
+    type: new_set
+    enabled: true
+    use_alt_glyphs: true
+block1_field:
+  -
+    id: mn1k73p4
+    block1_text: 'the work that matters most starts when something isn’t working.'
+    type: new_set
+    enabled: true
+video_field:
+  -
+    id: mn1kjaa6
+    video_field: 'https://www.youtube.com/watch?v=Tk1dffYiQNI&t=1134s'
+    type: new_set
+    enabled: true
+    video: 'https://www.youtube.com/watch?v=Tk1dffYiQNI&t=1135s'
+  -
+    id: mn1kpapj
+    video: 'https://www.youtube.com/watch?v=Tk1dffYiQNI&t=1135s'
+    type: new_set
+    enabled: true
+  -
+    id: mn1kpcoh
+    video: 'https://www.youtube.com/watch?v=Tk1dffYiQNI&t=1135s'
+    type: new_set
+    enabled: true
+  -
+    id: mn1kpegx
+    video: 'https://www.youtube.com/watch?v=Tk1dffYiQNI&t=1135s'
+    type: new_set
+    enabled: true
 ---
 ## Welcome to your brand new Statamic site!
 

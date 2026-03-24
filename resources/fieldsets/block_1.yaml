@@ -1,0 +1,19 @@
+title: 'Block 1'
+fields:
+  -
+    handle: block1_field
+    field:
+      type: replicator
+      display: 'Block1 Field'
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            new_set:
+              display: 'New Set'
+              fields:
+                -
+                  handle: block1_text
+                  field:
+                    type: textarea
+                    display: 'Block1 text'

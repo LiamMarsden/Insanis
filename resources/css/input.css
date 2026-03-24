@@ -65,7 +65,7 @@ label {
 h1 {
   font-size: 3rem;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 900;
   --tw-text-opacity: 1;
   @apply !text-[var(--primary_colour)];
 }
@@ -87,7 +87,10 @@ h3 {
 }
 
 h1, h2, h3, h4, li {
-  font-family: "Minion Pro", serif;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
 }
 
 p {
@@ -98,7 +101,7 @@ p {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   @apply !text-[var(--primary_colour)];
-  font-family: "Raleway", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
@@ -109,7 +112,7 @@ p {
   font-size: 0.75rem;
   line-height: 1rem;
   @apply !text-[var(--primary_colour)]/40;
-  font-family: "Raleway", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
@@ -128,7 +131,7 @@ button {
   --tw-text-opacity: 1;
   @apply !text-[var(--primary_colour)];
   cursor: pointer;
-  font-family: "Raleway", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
@@ -149,12 +152,12 @@ nav li {
   padding-bottom: 1.5rem;
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+  font-weight: 900;
 }
 
 nav li:hover {
-  background-color: rgb(255 255 255 / 0.5);
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+  opacity: 0.5;
 }
 
 .place-content-between {
@@ -270,3 +273,9 @@ menu {
 
 /* Ensure later content clears the float at the end of the article */
 .richtext::after { content: ""; display: block; clear: both; }
+
+.alt-glyphs {
+  font-feature-settings: "ss01" 1;
+  font-feature-settings: "ss02" 1;
+font-feature-settings: "ss03" 1;
+}
