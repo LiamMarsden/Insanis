@@ -1,0 +1,36 @@
+title: workshowcase
+fields:
+  -
+    handle: workshowcase_field
+    field:
+      type: replicator
+      display: workshowcase
+      sets:
+        new_set_group:
+          display: 'New Set Group'
+          sets:
+            workshowcase:
+              display: workshowcase
+              fields:
+                -
+                  handle: work
+                  field:
+                    max_files: 1
+                    container: assets
+                    type: assets
+                    display: Work
+                -
+                  handle: category
+                  field:
+                    type: text
+                    display: Category
+                -
+                  handle: title
+                  field:
+                    type: text
+                    display: Title
+                -
+                  handle: client
+                  field:
+                    type: text
+                    display: Client

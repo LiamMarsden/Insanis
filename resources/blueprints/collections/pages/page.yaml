@@ -29,10 +29,10 @@ tabs:
           -
             import: block_1
       -
-        display: Video
+        display: workshowcase
         fields:
           -
-            import: video
+            import: workshowcase
   sidebar:
     display: Sidebar
     sections:

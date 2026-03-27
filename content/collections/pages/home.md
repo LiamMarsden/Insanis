@@ -18,7 +18,7 @@ accordion_set:
     type: accordion_set
     enabled: true
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774172851
+updated_at: 1774521563
 b1_image: 'Asset 1.png'
 b1_header: 'Banner one Header'
 b1_body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -192,6 +192,39 @@ video_field:
   -
     id: mn1kpegx
     video: 'https://www.youtube.com/watch?v=Tk1dffYiQNI&t=1135s'
+    type: new_set
+    enabled: true
+workshowcase:
+  -
+    id: mn7bwf0y
+    work: behaviour-change--energex.png
+    client: Energex
+    title: 'Lowest incidents on record'
+    catagory: 'Behaviour Change'
+    type: new_set
+    enabled: true
+  -
+    id: mn7bz9ir
+    work: institutional-trust--university-of-queensland.png
+    client: UQ
+    title: '$607M raised'
+    catagory: 'Institutional Trust'
+    type: new_set
+    enabled: true
+  -
+    id: mn7c1j1p
+    work: public-health--qld-health.png
+    client: 'QLD Health'
+    title: 'Record Quitline calls'
+    catagory: 'Public Health'
+    type: new_set
+    enabled: true
+  -
+    id: mn7c2fak
+    work: category-launch--set-for-life.png
+    client: 'Set for Life'
+    title: "Australia's first new lottery in 30 years"
+    catagory: 'Category Launch'
     type: new_set
     enabled: true
 ---

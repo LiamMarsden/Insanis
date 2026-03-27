@@ -4,3 +4,11 @@
 @source "../../content";
 @import "./input.css";
 
+@font-face {
+  font-family: 'Daveway';
+  src: url('/public/fonts/Daveway-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: Black;
+  font-display: swap;
+}
+

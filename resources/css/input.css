@@ -18,6 +18,10 @@
   @apply mx-auto px-3;
 }
 
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
 .container-blog {
   @apply mx-auto w-full lg:w-8/12 xl:w-6/12 px-3 whitespace-pre-line;
 }
@@ -87,10 +91,12 @@ h3 {
 }
 
 h1, h2, h3, h4, li {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
+  font-family: 'Daveway';
+  src: url('/public/fonts/Daveway-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: Black;
+  font-display: swap;
+  letter-spacing: -0.07em;
 }
 
 p {
@@ -274,8 +280,3 @@ menu {
 /* Ensure later content clears the float at the end of the article */
 .richtext::after { content: ""; display: block; clear: both; }
 
-.alt-glyphs {
-  font-feature-settings: "ss01" 1;
-  font-feature-settings: "ss02" 1;
-font-feature-settings: "ss03" 1;
-}
