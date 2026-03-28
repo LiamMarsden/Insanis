@@ -20,10 +20,10 @@ fields:
                     type: assets
                     display: Work
                 -
-                  handle: category
+                  handle: proof
                   field:
                     type: text
-                    display: Category
+                    display: Proof
                 -
                   handle: title
                   field:

@@ -18,10 +18,6 @@
   @apply mx-auto px-3;
 }
 
-body {
-  font-family: 'Raleway', sans-serif;
-}
-
 .container-blog {
   @apply mx-auto w-full lg:w-8/12 xl:w-6/12 px-3 whitespace-pre-line;
 }
@@ -90,13 +86,22 @@ h3 {
   @apply !text-[var(--primary_colour)];
 }
 
-h1, h2, h3, h4, li {
+h1, h2, li {
   font-family: 'Daveway';
   src: url('/public/fonts/Daveway-Black.woff') format('woff');
-  font-weight: 900;
-  font-style: Black;
   font-display: swap;
-  letter-spacing: -0.07em;
+}
+
+h3 {
+  font-family: 'Daveway';
+  src: url('/public/fonts/Daveway-Bold.woff') format('woff');
+    font-display: swap;
+}
+
+h4{
+  font-family: 'Daveway';
+  src: url('/public/fonts/Daveway-Regular.woff') format('woff');
+    font-display: swap;
 }
 
 p {
@@ -107,9 +112,10 @@ p {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   @apply !text-[var(--primary_colour)];
-  font-family: "Outfit", sans-serif;
+  font-family: 'Daveway';
+  src: url('/public/fonts/Daveway-Light.woff') format('woff');
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -118,10 +124,6 @@ p {
   font-size: 0.75rem;
   line-height: 1rem;
   @apply !text-[var(--primary_colour)]/40;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
 }
 
 button {
