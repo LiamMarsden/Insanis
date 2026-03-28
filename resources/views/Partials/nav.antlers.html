@@ -1,14 +1,14 @@
    <!-- Header Start -->
-<nav class="top-0 bg-black w-full flex fixed h-20 z-50">
+<nav class="top-0 w-full flex z-50">
       <div class="w-full h-fit grid justify-items-stretch items-start md:items-center absolute m-3">
                 <a class="justify-self-start md:justify-self-center" href="/"> 
           <img class="h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
         </a>
       </div>
-      <div class="">
+      <div class="absolute flex top-0 right-0">
         <ul id=""></ul>
                   {{ nav:nav }}
-          <a class="absolute top-0 right-0 h-20" href="{{ url }}"><li class="list-none !text-[var(--secondary_colour)] tracking-widest">{{ title }}</li></a>
+          <a class="h-20" href="{{ url }}"><li class="list-none !text-[var(--secondary_colour)] tracking-widest">{{ title }}</li></a>
           {{ /nav:nav }}
       </ul>
       </div>

@@ -18,7 +18,7 @@ accordion_set:
     type: accordion_set
     enabled: true
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774665033
+updated_at: 1774668636
 b1_image: 'Asset 1.png'
 b1_header: 'Banner one Header'
 b1_body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -230,40 +230,44 @@ workshowcase:
 workshowcase_field:
   -
     id: mn9p8psa
-    work: behaviour-change--energex.png
+    work: 'Asset 5.png'
     category: 'Behaviour Change'
     title: 'Lowest incidents on record'
     client: Energex
     type: workshowcase
     enabled: true
     proof: 'Behaviour Change'
+    image: behaviour-change--energex.png
   -
     id: mn9p8re6
     work: institutional-trust--university-of-queensland.png
     category: 'Insitutional Trust'
-    title: UQ
-    client: '$607M raised'
+    title: '$607M raised'
+    client: UQ
     type: workshowcase
     enabled: true
     proof: 'Institutional Trust'
+    image: institutional-trust--university-of-queensland.png
   -
     id: mn9p8u1q
     work: public-health--qld-health.png
     category: 'Public Health'
-    title: 'QLD Health'
-    client: 'Record Quitline calls'
+    title: 'Record Quitline calls'
+    client: 'QLD Health'
     type: workshowcase
     enabled: true
     proof: 'Public Health'
+    image: public-health--qld-health.png
   -
     id: mn9p8szt
     work: category-launch--set-for-life.png
     category: 'Category Launch'
-    title: 'Set for Life'
-    client: "Australia's first new lottery in 30 years"
+    title: "Australia's first new lottery in 30 years"
+    client: 'Set for Life'
     type: workshowcase
     enabled: true
     proof: 'Category Launch'
+    image: category-launch--set-for-life.png
 ---
 ## Welcome to your brand new Statamic site!
 

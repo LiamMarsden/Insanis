@@ -13,12 +13,12 @@ fields:
               display: workshowcase
               fields:
                 -
-                  handle: work
+                  handle: image
                   field:
                     max_files: 1
                     container: assets
                     type: assets
-                    display: Work
+                    display: image
                 -
                   handle: proof
                   field:

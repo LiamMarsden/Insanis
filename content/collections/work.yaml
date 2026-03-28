@@ -1,0 +1,17 @@
+title: Casestudies
+template: work/show
+layout: layout
+mount: f10e10dc-d88c-4a97-9b99-ca69d86e7e17
+revisions: false
+route: '/work/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private
+preview_targets:
+  -
+    label: Entry
+    url: '{permalink}'
+    refresh: true
+structure:
+  root: false

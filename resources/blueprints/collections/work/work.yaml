@@ -1,0 +1,121 @@
+title: Work
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        display: 'Homepage Content'
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+              validate:
+                - required
+          -
+            handle: feature_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Feature Image'
+          -
+            handle: proof
+            field:
+              type: text
+              display: Proof
+          -
+            handle: highlight
+            field:
+              type: text
+              display: Highlight
+      -
+        display: Contents
+        fields:
+          -
+            handle: banner_image
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Banner Image'
+          -
+            handle: banner_header
+            field:
+              type: text
+              display: 'Banner Header'
+          -
+            handle: idea
+            field:
+              type: markdown
+              display: Idea
+          -
+            handle: challenge
+            field:
+              type: markdown
+              display: Challenge
+          -
+            handle: content
+            field:
+              type: markdown
+              display: work
+          -
+            handle: assets
+            field:
+              type: replicator
+              display: Assets
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    image:
+                      display: Image
+                      icon: media-image-picture-orientation
+                      fields:
+                        -
+                          handle: work_asset_image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: 'Work Asset - Image'
+                    video:
+                      display: Video
+                      icon: media-webcam-video
+                      fields:
+                        -
+                          handle: work_asset_video
+                          field:
+                            type: video
+                            display: 'Work Asset - Video'
+          -
+            handle: callout
+            field:
+              type: textarea
+              display: Callout
+          -
+            handle: callout_support
+            field:
+              type: text
+              display: 'Callout Support'
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'
+          -
+            handle: parent
+            field:
+              type: entries
+              collections:
+                - work
+              max_items: 1
+              listable: false
+              localizable: true
