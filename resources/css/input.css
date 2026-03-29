@@ -46,9 +46,6 @@ button {
   @apply w-fit px-16 py-2 !bg-[var(--object_bg_colour)]/20 hover:!bg-[var(--object_bg_colour)]/70 hover:!ring-2 hover:ring-[var(--primary_colour)] rounded-lg uppercase font-bold;
 }
 
-nav li {
-  @apply h-full py-6 px-10 hover:!text-[var(--primary_colour)];
-}
 
 #footer a {
   @apply px-10 md:px-0 md:pr-24;
@@ -58,16 +55,12 @@ li, ::placeholder, label {
   @apply !text-[var(--secondary_colour)];
 }
 
-label {
-  @apply !text-[var(--primary_colour)];
-}
 
 h1 {
   font-size: 3rem;
   line-height: 1;
   font-weight: 900;
   --tw-text-opacity: 1;
-  @apply !text-[var(--primary_colour)];
 }
 
 h2 {
@@ -75,7 +68,6 @@ h2 {
   line-height: 2.25rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  @apply !text-[var(--primary_colour)];
 }
 
 h3 {
@@ -83,7 +75,6 @@ h3 {
   line-height: 1.75rem;
   font-weight: 700;
   --tw-text-opacity: 1;
-  @apply !text-[var(--primary_colour)];
 }
 
 h1, h2, li {
@@ -158,13 +149,9 @@ nav li {
   height: 100%;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   font-weight: 900;
-}
-
-nav li:hover {
-  opacity: 0.5;
 }
 
 .place-content-between {

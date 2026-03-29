@@ -1,9 +1,11 @@
   <!-- Block Start -->
 
 
-  <div class="h-screen w-full bg-black grid place-content-center text-center">
+  <div class="h-screen w-full bg-black flex justify-center text-center">
     {{ block1_field }}
-      <h2 class="alt-glyphs !text-white !text-6xl tracking-tight container ">{{block1_text}}</h2>
+      <div class="grid place-items-center">
+      <h2 class="!text-white !text-6xl !font-black tracking-tight w-7/12 text-center">{{block1_text}}</h2>
+      </div>
     {{ /block1_field }}
   </div>
 

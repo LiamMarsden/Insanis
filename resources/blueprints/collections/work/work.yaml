@@ -46,59 +46,64 @@ tabs:
               type: text
               display: 'Banner Header'
           -
-            handle: idea
-            field:
-              type: markdown
-              display: Idea
-          -
-            handle: challenge
-            field:
-              type: markdown
-              display: Challenge
-          -
-            handle: content
-            field:
-              type: markdown
-              display: work
-          -
-            handle: assets
+            handle: content_field
             field:
               type: replicator
-              display: Assets
+              display: Content
               sets:
                 new_set_group:
                   display: 'New Set Group'
                   sets:
-                    image:
-                      display: Image
+                    copy:
+                      display: Copy
+                      icon: text-formatting-type-cursor
+                      fields:
+                        -
+                          handle: content_header
+                          field:
+                            type: text
+                            display: 'Content Header'
+                        -
+                          handle: content_copy
+                          field:
+                            buttons:
+                              - h1
+                              - h2
+                              - h3
+                              - bold
+                              - italic
+                              - alignleft
+                              - aligncenter
+                              - alignright
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                              - anchor
+                              - image
+                              - table
+                              - horizontalrule
+                            remove_empty_nodes: false
+                            type: bard
+                            display: Content
+                    assets:
+                      display: Assets
                       icon: media-image-picture-orientation
                       fields:
                         -
-                          handle: work_asset_image
+                          handle: images
                           field:
                             max_files: 1
                             container: assets
                             type: assets
-                            display: 'Work Asset - Image'
-                    video:
-                      display: Video
-                      icon: media-webcam-video
-                      fields:
+                            display: Images
                         -
-                          handle: work_asset_video
+                          handle: video
                           field:
-                            type: video
-                            display: 'Work Asset - Video'
-          -
-            handle: callout
-            field:
-              type: textarea
-              display: Callout
-          -
-            handle: callout_support
-            field:
-              type: text
-              display: 'Callout Support'
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: Video
   sidebar:
     display: Sidebar
     sections:

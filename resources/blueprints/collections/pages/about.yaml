@@ -13,24 +13,48 @@ tabs:
               validate:
                 - required
       -
-        display: 'New Section'
-        fields:
-          -
-            import: banner_three
-      -
         display: Content
         fields:
           -
-            handle: bard_field
+            handle: about_text_field
             field:
-              buttons:
-                - image
-              remove_empty_nodes: false
-              type: bard
-              display: 'Bard Field'
-              reading_time: true
-              word_count: true
-              container: assets
+              type: replicator
+              display: Content
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: about_text
+                          field:
+                            buttons:
+                              - h1
+                              - h2
+                              - h3
+                              - h4
+                              - bold
+                              - italic
+                              - alignleft
+                              - aligncenter
+                              - alignright
+                              - unorderedlist
+                              - orderedlist
+                              - removeformat
+                              - quote
+                              - anchor
+                              - image
+                              - table
+                            remove_empty_nodes: false
+                            type: bard
+                            display: about_text
+                        -
+                          handle: bg_colour
+                          field:
+                            type: toggle
+                            display: BG-Colour
   sidebar:
     display: Sidebar
     sections:
@@ -51,12 +75,12 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
-
 sets:
   image_block:
     display: Image
     fields:
-      - handle: image
+      -
+        handle: image
         field:
           type: assets
           container: assets
@@ -64,38 +88,43 @@ sets:
           allow_uploads: true
           restrict: true
           display: Image
-      - handle: alt
+      -
+        handle: alt
         field:
           type: text
-          display: Alt text
-      - handle: caption
+          display: 'Alt text'
+      -
+        handle: caption
         field:
           type: textarea
           display: Caption
           antlers: false
           rows: 2
-      - handle: ratio
+      -
+        handle: ratio
         field:
           type: select
-          display: Aspect Ratio
+          display: 'Aspect Ratio'
           options:
             auto: Auto
-            1-1: 1:1
-            4-3: 4:3
-            16-9: 16:9
-            3-2: 3:2
+            1-1: '1:1'
+            4-3: '4:3'
+            16-9: '16:9'
+            3-2: '3:2'
           default: auto
-      - handle: size
+      -
+        handle: size
         field:
           type: select
-          display: Display Size
+          display: 'Display Size'
           options:
-            full: Full width
+            full: 'Full width'
             large: Large
             medium: Medium
             small: Small
           default: large
-      - handle: align
+      -
+        handle: align
         field:
           type: button_group
           display: Alignment
@@ -104,18 +133,21 @@ sets:
             center: Center
             right: Right
           default: center
-      - handle: crop
+      -
+        handle: crop
         field:
           type: toggle
-          display: Crop to fit ratio?
+          display: 'Crop to fit ratio?'
           default: true
-      - handle: link_url
+      -
+        handle: link_url
         field:
           type: text
           input_type: url
-          display: Link (optional)
-      - handle: lightbox
+          display: 'Link (optional)'
+      -
+        handle: lightbox
         field:
           type: toggle
-          display: Enable lightbox?
+          display: 'Enable lightbox?'
           default: false

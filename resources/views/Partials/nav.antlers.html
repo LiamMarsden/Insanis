@@ -1,16 +1,30 @@
    <!-- Header Start -->
-<nav class="top-0 w-full flex z-50">
-      <div class="w-full h-fit grid justify-items-stretch items-start md:items-center absolute m-3">
-                <a class="justify-self-start md:justify-self-center" href="/"> 
-          <img class="h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
+<nav class="top-0 w-full flex">
+    <div class="w-full h-fit grid justify-items-stretch items-start md:items-center absolute m-3">
+        <a class="justify-self-start md:justify-self-center" href="/"> 
+            <img class="h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
         </a>
-      </div>
-      <div class="absolute flex top-0 right-0">
-        <ul id=""></ul>
-                  {{ nav:nav }}
-          <a class="h-20" href="{{ url }}"><li class="list-none !text-[var(--secondary_colour)] tracking-widest">{{ title }}</li></a>
-          {{ /nav:nav }}
-      </ul>
-      </div>
-    </nav>
+    </div>
+
+    <div class="absolute flex top-0 right-0 mr-20">
+        <ul class="flex gap-6">
+            {{ nav:nav }}
+
+            <li class="list-none tracking-widest transition-opacity duration-300
+                {{ if is_homepage }}
+                    opacity-100 !text-white hover:opacity-50
+                {{ elseif is_current || is_parent }}
+                    opacity-100 !text-white
+                {{ else }}
+                    opacity-50 !text-white hover:opacity-100
+                {{ /if }}">
+                <a class="h-20 block" href="{{ url }}">
+                    {{ title }}
+                </a>
+            </li>
+
+            {{ /nav:nav }}
+        </ul>
+    </div>
+</nav>
 <!-- Header End -->
