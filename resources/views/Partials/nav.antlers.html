@@ -1,28 +1,53 @@
-   <!-- Header Start -->
-<nav class="top-0 w-full flex">
-    <div class="w-full h-fit grid justify-items-stretch items-start md:items-center absolute m-3">
-        <a class="justify-self-start md:justify-self-center" href="/"> 
+
+<!-- Header Start -->
+<nav class="top-0 w-full absolute z-50">
+    <div class="w-full flex items-center justify-between p-3">
+        <a href="/">
             <img class="h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
         </a>
+
+        <!-- Mobile Button -->
+            <div id="mobile-menu-toggle" class="md:hidden !text-white text-4xl p-8 cursor-pointer" type="button">
+                <span id="menu-icon">☰</span>
+            </div>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex">
+            <ul class="flex gap-6 mr-20">
+                {{ nav:nav }}
+                    <li class="list-none tracking-widest transition-opacity duration-300
+                        {{ if is_homepage }}
+                            opacity-100 !text-white hover:opacity-50
+                        {{ elseif is_current || is_parent }}
+                            opacity-100 !text-white
+                        {{ else }}
+                            opacity-50 !text-white hover:opacity-100
+                        {{ /if }}">
+                        <a class="h-20 flex items-center" href="{{ url }}">
+                            {{ title }}
+                        </a>
+                    </li>
+                {{ /nav:nav }}
+            </ul>
+        </div>
     </div>
 
-    <div class="absolute flex top-0 right-0 mr-20">
-        <ul class="flex gap-6">
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black min-h-screen px-4 pt-24 pb-8">
+        <ul class="space-y-6 text-center">
             {{ nav:nav }}
-
-            <li class="list-none tracking-widest transition-opacity duration-300
-                {{ if is_homepage }}
-                    opacity-100 !text-white hover:opacity-50
-                {{ elseif is_current || is_parent }}
-                    opacity-100 !text-white
-                {{ else }}
-                    opacity-50 !text-white hover:opacity-100
-                {{ /if }}">
-                <a class="h-20 block" href="{{ url }}">
-                    {{ title }}
-                </a>
-            </li>
-
+                <li class="tracking-widest
+                    {{ if is_homepage }}
+                        opacity-100 !text-white
+                    {{ elseif is_current || is_parent }}
+                        opacity-100 !text-white
+                    {{ else }}
+                        opacity-50 !text-white
+                    {{ /if }}">
+                    <a class="block text-2xl" href="{{ url }}">
+                        {{ title }}
+                    </a>
+                </li>
             {{ /nav:nav }}
         </ul>
     </div>

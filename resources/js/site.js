@@ -1,26 +1,31 @@
 // This is all you.
 
 // Burger Menu Start
+                document.addEventListener('DOMContentLoaded', function () {
+                    const toggleButton = document.getElementById('mobile-menu-toggle');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const menuIcon = document.getElementById('menu-icon');
+                    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
 
-  const btn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
+                    if (!toggleButton || !mobileMenu) return;
 
-  function toggleMenu() {
-    const isOpening = !btn.classList.contains('open');
-    btn.classList.toggle('open', isOpening);
-    btn.setAttribute('aria-expanded', isOpening ? 'true' : 'false');
+                    toggleButton.addEventListener('click', function () {
+                        mobileMenu.classList.toggle('hidden');
 
-    menu.classList.toggle('-translate-x-[105%]', !isOpening);
-    menu.classList.toggle('translate-x-0', isOpening);
-  }
+                        if (mobileMenu.classList.contains('hidden')) {
+                            menuIcon.textContent = '☰'; // burger
+                        } else {
+                            menuIcon.textContent = '✕'; // cross
+                        }
+                    });
 
-  btn.addEventListener('click', toggleMenu);
-
-  // Close menu when a link is clicked (mobile)
-  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    if (btn.classList.contains('open')) toggleMenu();
-  }));
-
+                    mobileLinks.forEach(link => {
+                        link.addEventListener('click', function () {
+                            mobileMenu.classList.add('hidden');
+                            menuIcon.textContent = '☰';
+                        });
+                    });
+                });
 // Burger Menu End
 
 
