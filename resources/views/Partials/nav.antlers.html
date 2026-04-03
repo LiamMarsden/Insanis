@@ -1,19 +1,19 @@
 
 <!-- Header Start -->
 <nav class="top-0 w-full absolute z-50">
-    <div class="w-full flex items-center justify-between p-3">
-        <a href="/">
+    <div class="w-full flex items-center justify-between">
+        <a class="grid place-content-center w-full absolute mt-30" href="/">
             <img class="h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
         </a>
 
         <!-- Mobile Button -->
-            <div id="mobile-menu-toggle" class="md:hidden !text-white text-4xl p-8 cursor-pointer" type="button">
+            <div id="mobile-menu-toggle" class="md:hidden !text-white text-6xl pt-6 cursor-pointer absolute top-0 right-0 pr-5" type="button">
                 <span id="menu-icon">☰</span>
             </div>
 
         <!-- Desktop Nav -->
-        <div class="hidden md:flex">
-            <ul class="flex gap-6 mr-20">
+        <div class="hidden md:flex absolute right-0 top-0 mr-20">
+            <ul class="flex gap-6">
                 {{ nav:nav }}
                     <li class="list-none tracking-widest transition-opacity duration-300
                         {{ if is_homepage }}
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black min-h-screen px-4 pt-24 pb-8">
+    <div id="mobile-menu" class="hidden md:hidden bg-black h-screen px-4 pt-40 pb-8">
         <ul class="space-y-6 text-center">
             {{ nav:nav }}
                 <li class="tracking-widest

@@ -267,4 +267,3 @@ menu {
 
 /* Ensure later content clears the float at the end of the article */
 .richtext::after { content: ""; display: block; clear: both; }
-
