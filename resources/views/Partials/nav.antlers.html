@@ -2,8 +2,8 @@
 <!-- Header Start -->
 <nav class="top-0 w-full absolute z-50">
     <div class="w-full flex items-center justify-between">
-        <a class="grid place-content-center w-full absolute mt-30" href="/">
-            <img class="h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
+        <a class="grid place-content-start ml-5 md:ml-0 md:place-content-center w-full absolute mt-30" href="/">
+            <img class="h-10 md:h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
         </a>
 
         <!-- Mobile Button -->
@@ -33,7 +33,7 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black h-screen px-4 pt-40 pb-8">
+    <div id="mobile-menu" class="hidden md:hidden bg-black h-screen grid place-items-center px-4 pt-40 pb-8">
         <ul class="space-y-6 text-center">
             {{ nav:nav }}
                 <li class="tracking-widest
@@ -44,7 +44,7 @@
                     {{ else }}
                         opacity-50 !text-white
                     {{ /if }}">
-                    <a class="block text-2xl" href="{{ url }}">
+                    <a class="block text-6xl" href="{{ url }}">
                         {{ title }}
                     </a>
                 </li>
