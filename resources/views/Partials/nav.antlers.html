@@ -3,7 +3,7 @@
 <nav class="top-0 w-full absolute z-50">
     <div class="w-full flex items-center justify-between">
         <a class="grid place-content-start ml-5 md:ml-0 md:place-content-center w-full absolute mt-30" href="/">
-            <img class="h-10 md:h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
+            <img class="xl:h-20 h-10 md:h-12" src="{{ glide :src="branding:logo_primary" fit="crop_focal" }}" alt="">
         </a>
 
         <!-- Mobile Button -->
@@ -15,7 +15,7 @@
         <div class="hidden md:flex absolute right-0 top-0 mr-20">
             <ul class="flex gap-6">
                 {{ nav:nav }}
-                    <li class="list-none tracking-widest transition-opacity duration-300
+                    <li class="list-none tracking-widest transition-opacity duration-300 xl:text-4xl
                         {{ if is_homepage }}
                             opacity-100 !text-white hover:opacity-50
                         {{ elseif is_current || is_parent }}

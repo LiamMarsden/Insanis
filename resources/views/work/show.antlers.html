@@ -2,7 +2,7 @@
 
     <div class="w-full grid">
         <div>
-            <img class="w-full aspect-video object-cover" src="{{ glide :src="banner_image" fit="crop_focal" }}" alt="">
+            <img class="w-full aspect-square md:aspect-video object-cover" src="{{ glide :src="banner_image" fit="crop_focal" }}" alt="">
         </div>
         <div class="container absolute text-center place-self-center">
             <h2 class="!text-white !text-3xl md:!text-6xl/13 tracking-tighter !font-black w-full md:w-11/12 xl:w-9/12 place-self-center text-balance">
@@ -11,11 +11,12 @@
         </div>
     </div>
 
-    {{ content_field }}
+    <div class="container">
+        {{ content_field }}
 
         {{ if type == "copy" }}
-            <div class="mx-4 lg:mx-60 space-y-2">
-                <h2 class="!text-3xl !font-black">{{ content_header }}</h2>
+            <div class="mx-4 my-20">
+                <h2 class="!text-3xl xl:!text-5xl !font-black">{{ content_header }}</h2>
                 <p>{{ content_copy }}</p>
             </div>
         {{ /if }}
@@ -38,7 +39,7 @@
 
             {{ if video }}
                 <div class="videos-section mt-4 mx-4">
-                    <div class="w-full lg:w-9/12 place-self-center space-y-6">
+                    <div class="w-full place-self-center space-y-6 mb-40 md:mb-70">
                         {{ video }}
                             <video class="w-full rounded-lg" controls>
                                 <source src="{{ url }}">
@@ -52,4 +53,6 @@
         {{ /if }}
 
     {{ /content_field }}
+
+    </div>
 </div>
