@@ -20,7 +20,7 @@ markdown_field: |-
 
   Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774777991
+updated_at: 1777207002
 bard_field:
   -
     type: paragraph
@@ -65,7 +65,7 @@ about_text_field:
         type: heading
         attrs:
           textAlign: center
-          level: 1
+          level: 2
         content:
           -
             type: text
@@ -81,7 +81,7 @@ about_text_field:
         type: heading
         attrs:
           textAlign: center
-          level: 1
+          level: 2
         content:
           -
             type: text
@@ -90,7 +90,7 @@ about_text_field:
         type: heading
         attrs:
           textAlign: center
-          level: 1
+          level: 2
         content:
           -
             type: text
@@ -99,7 +99,7 @@ about_text_field:
         type: heading
         attrs:
           textAlign: center
-          level: 1
+          level: 2
         content:
           -
             type: text
@@ -114,7 +114,7 @@ about_text_field:
         type: heading
         attrs:
           textAlign: center
-          level: 1
+          level: 2
         content:
           -
             type: text
@@ -138,7 +138,7 @@ about_text_field:
         type: heading
         attrs:
           textAlign: center
-          level: 1
+          level: 2
         content:
           -
             type: text

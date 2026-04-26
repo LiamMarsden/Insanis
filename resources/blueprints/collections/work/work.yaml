@@ -104,6 +104,49 @@ tabs:
                             container: assets
                             type: assets
                             display: Video
+      -
+        display: Stats
+        fields:
+          -
+            handle: stat1
+            field:
+              buttons:
+                - h1
+                - h2
+                - h3
+                - h4
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+              remove_empty_nodes: false
+              type: bard
+              display: 'Hero Stat'
+          -
+            handle: stat2
+            field:
+              buttons:
+                - h1
+                - h2
+                - h3
+                - h4
+                - bold
+                - italic
+                - unorderedlist
+                - orderedlist
+                - removeformat
+                - quote
+                - anchor
+                - image
+                - table
+              remove_empty_nodes: false
+              type: bard
+              display: 'Secondary Stat'
   sidebar:
     display: Sidebar
     sections:

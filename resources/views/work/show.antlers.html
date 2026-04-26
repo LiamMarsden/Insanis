@@ -4,8 +4,8 @@
         <div>
             <img class="w-full aspect-square md:aspect-video object-cover" src="{{ glide :src="banner_image" fit="crop_focal" }}" alt="">
         </div>
-        <div class="container absolute text-center place-self-center">
-            <h2 class="!text-white !text-3xl md:!text-6xl/13 tracking-tighter !font-black w-full md:w-11/12 xl:w-9/12 place-self-center text-balance">
+        <div class="absolute text-center place-self-center">
+            <h2 class="!text-white tracking-tighter w-full md:w-11/12 xl:w-9/12 place-self-center">
                 {{ banner_header }}
             </h2>
         </div>
@@ -16,7 +16,7 @@
 
         {{ if type == "copy" }}
             <div class="mx-4 my-20">
-                <h2 class="!text-3xl xl:!text-5xl !font-black">{{ content_header }}</h2>
+                <h3 class="!font-black pb-7">{{ content_header }}</h3>
                 <p>{{ content_copy }}</p>
             </div>
         {{ /if }}
@@ -39,7 +39,7 @@
 
             {{ if video }}
                 <div class="videos-section mt-4 mx-4">
-                    <div class="w-full place-self-center space-y-6 mb-40 md:mb-70">
+                    <div class="w-full place-self-center space-y-6">
                         {{ video }}
                             <video class="w-full rounded-lg" controls>
                                 <source src="{{ url }}">
@@ -51,8 +51,15 @@
             {{ /if }}
 
         {{ /if }}
-
+        
     {{ /content_field }}
+
+    <div class="w-full grid place-content-center container mt-20 mb-70">
+    <div class="text-center w-full md:w-8/12 mx-auto  space-y-3">
+            <h2 class="!font-black">{{ stat1 }}</h2>
+            <h4>{{ stat2 }}</h4>
+    </div>
+    </div>
 
     </div>
 </div>

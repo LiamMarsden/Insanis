@@ -6,7 +6,7 @@ feature_image: behaviour-change--energex.png
 proof: 'Behaviour Change'
 callout: '35% reduction in powerline contacts'
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774769929
+updated_at: 1777204577
 highlight: 'Lowest incidents on record'
 banner_image: 'energex--if-you-could-see-the-danger,-you-would-stop-yourself.jpg'
 banner_header: 'If you could see the danger, you would stop yourself.'
@@ -111,38 +111,31 @@ content_field:
     video: energex-gutters.mp4
     type: assets
     enabled: true
+stat1:
   -
-    id: mnbfh671
-    content_copy:
+    type: heading
+    attrs:
+      level: 2
+    content:
       -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 1
-        content:
-          -
-            type: text
-            text: '35% reduction '
-          -
-            type: hardBreak
-          -
-            type: text
-            text: 'in powerline contacts'
+        type: text
+        text: '35% reduction in powerline contacts'
+stat2:
+  -
+    type: heading
+    attrs:
+      level: 4
+    content:
       -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 3
-        content:
-          -
-            type: text
-            text: '25% reduction in safety incidents'
-          -
-            type: hardBreak
-          -
-            type: text
-            text: '7 industry awards'
-    type: copy
-    enabled: true
+        type: text
+        text: '25% reduction in safety incidents'
+  -
+    type: heading
+    attrs:
+      level: 4
+    content:
+      -
+        type: text
+        text: '7 industry awards'
 ---
 A series of television commercials placed viewers inside everyday situations where electrical danger was hidden in plain sight. Stories covered home renovation, agriculture, storm damage and work near overhead powerlines. The campaign ran across TV, outdoor, radio, print and digital.

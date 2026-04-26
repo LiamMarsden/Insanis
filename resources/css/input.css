@@ -18,24 +18,32 @@
   @apply mx-auto px-3;
 }
 
-.container-blog {
-  @apply mx-auto w-full lg:w-8/12 xl:w-6/12 px-3 whitespace-pre-line;
-}
-
 h1 {
-  @apply text-5xl font-bold;
+  @apply text-9xl md:text-[13vw] font-black;
 }
 
 h2 {
-  @apply text-3xl font-bold;
+  @apply text-[10vw] md:text-8xl leading-none font-black text-balance;
 }
 
 h3 {
-  @apply text-xl font-bold;
+  @apply text-5xl font-black text-pretty;
+}
+
+h4 {
+  @apply text-xl font-medium text-pretty;
+}
+
+h5 {
+  @apply text-3xl font-thin text-pretty;
 }
 
 p {
-  @apply text-sm text-balance leading-loose;
+  @apply text-lg font-medium;
+}
+
+.container-blog {
+  @apply mx-auto w-full lg:w-8/12 xl:w-6/12 px-3 whitespace-pre-line;
 }
 
 .caption {
@@ -46,36 +54,10 @@ button {
   @apply w-fit px-16 py-2 !bg-[var(--object_bg_colour)]/20 hover:!bg-[var(--object_bg_colour)]/70 hover:!ring-2 hover:ring-[var(--primary_colour)] rounded-lg uppercase font-bold;
 }
 
-
-#footer a {
-  @apply px-10 md:px-0 md:pr-24;
-}
-
 li, ::placeholder, label {
   @apply !text-[var(--secondary_colour)];
 }
 
-
-h1 {
-  font-size: 3rem;
-  line-height: 1;
-  font-weight: 900;
-  --tw-text-opacity: 1;
-}
-
-h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-}
-
-h3 {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  --tw-text-opacity: 1;
-}
 
 h1, h2, li {
   font-family: 'Daveway';
@@ -96,18 +78,12 @@ h4{
 }
 
 p {
-  text-wrap: balance;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  line-height: 2;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
   @apply !text-[var(--primary_colour)];
   font-family: 'Daveway';
   src: url('/public/fonts/Daveway-Light.woff') format('woff');
   font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
 }
 
 .caption {
