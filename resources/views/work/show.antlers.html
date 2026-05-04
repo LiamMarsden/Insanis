@@ -1,65 +1,172 @@
 <div class="space-y-15">
 
-    <div class="w-full grid">
-        <div>
-            <img class="w-full aspect-square md:aspect-video object-cover" src="{{ glide :src="banner_image" fit="crop_focal" }}" alt="">
-        </div>
-        <div class="absolute text-center place-self-center">
-            <h2 class="!text-white tracking-tighter w-full md:w-11/12 xl:w-9/12 place-self-center">
-                {{ banner_header }}
-            </h2>
-        </div>
-    </div>
+    <!-- Hero Video Block -->
+    <div class="relative w-full overflow-hidden bg-black grid place-content-center text-center aspect-square md:aspect-auto md:h-screen">
 
-    <div class="container">
+        {{ if video_asset }}
+            {{ video_asset }}
+                <video 
+                    class="absolute inset-0 w-full h-full object-cover"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                >
+                    <source src="{{ url }}" type="video/mp4">
+                </video>
+            {{ /video_asset }}
+
+        {{ elseif video_url }}
+            <video 
+                class="absolute inset-0 w-full h-full object-cover"
+                autoplay
+                muted
+                loop
+                playsinline
+            >
+                <source src="{{ video_url }}" type="video/mp4">
+            </video>
+        {{ /if }}
+
+        <div class="relative z-10 px-6">
+            <h2 class="!text-white tracking-tighter">{{ banner_header }}</h2>
+        </div>
+
+    </div>
+    <!-- Hero Video Block End -->
+
+
+<div class="container">
+    <div class="grid grid-cols-12 w-full lg:w-9/12 mx-auto gap-0">
+
         {{ content_field }}
 
-        {{ if type == "copy" }}
-            <div class="mx-4 my-20">
-                <h3 class="!font-black pb-7">{{ content_header }}</h3>
-                <p>{{ content_copy }}</p>
+            {{ if type == "copy" }}
+
+                <div class="col-span-12 mx-4 my-20">
+                    <h3 class="!font-black pb-7">{{ content_header }}</h3>
+                    <p>{{ content_copy }}</p>
+                </div>
+
+            {{ /if }}
+
+
+{{ if type == "media_items" }}
+
+    <div class="
+        {{ if media_width == 'full' }}col-span-12{{ /if }}
+        {{ if media_width == 'half' }}col-span-12 md:col-span-6{{ /if }}
+        {{ if media_width == 'third' }}col-span-12 md:col-span-4{{ /if }}
+        {{ if media_width == 'two_thirds' }}col-span-12 md:col-span-8{{ /if }}
+    ">
+
+        {{ if image }}
+            {{ image }}
+                <img
+                    class="
+                        w-full object-contain object-center
+                        {{ if media_ratio == 'square' }}aspect-square{{ /if }}
+                        {{ if media_ratio == 'video' }}aspect-video{{ /if }}
+                        {{ if media_ratio == 'portrait' }}aspect-[4/5], object-fill{{ /if }}
+                    "
+                    src="{{ glide :src='url' fit='crop_focal' }}"
+                    alt="{{ alt ?? title }}"
+                >
+            {{ /image }}
+        {{ /if }}
+
+        {{ if video_asset or video_url }}
+
+            <button
+                type="button"
+                class="
+                    video-lightbox-trigger group relative block w-full overflow-hidden cursor-pointer
+                    {{ if media_ratio == 'square' }}aspect-square{{ /if }}
+                    {{ if media_ratio == 'video' }}aspect-video{{ /if }}
+                    {{ if media_ratio == 'portrait' }}aspect-[4/5]{{ /if }}
+                "
+                {{ if video_asset }}
+                    {{ video_asset }}
+                        data-video="{{ url }}"
+                    {{ /video_asset }}
+                {{ else }}
+                    data-video="{{ video_url }}"
+                {{ /if }}
+            >
+
+                {{ thumbnail }}
+                    <img
+                        class="absolute inset-0 w-full h-full object-cover transition duration-300 group-hover:scale-105"
+                        src="{{ glide :src='url' fit='crop_focal' }}"
+                        alt="{{ alt ?? title }}"
+                    >
+                {{ /thumbnail }}
+
+                <span class="absolute inset-0 grid place-items-center bg-black/20">
+                    <span class="grid h-20 w-20 place-items-center rounded-full border-2 border-white">
+                        <span class="ml-1 h-0 w-0 border-y-[14px] border-y-transparent border-l-[22px] border-l-white"></span>
+                    </span>
+                </span>
+
+            </button>
+
+        {{ /if }}
+
+    </div>
+
+{{ /if }}
+
+        {{ /content_field }}
+    
+    </div> 
+</div>
+
+
+        <div class="w-full grid place-content-center container mt-20 mb-70">
+            <div class="text-center w-full md:w-8/12 mx-auto space-y-3">
+                <h2 class="!font-black">{{ stat1 }}</h2>
+                <h4>{{ stat2 }}</h4>
             </div>
-        {{ /if }}
+        </div>
 
-        {{ if type == "assets" }}
+        <div id="video-lightbox" class="fixed inset-0 z-[9999] hidden bg-black/90 p-4">
+    <button id="video-lightbox-close" class="absolute right-6 top-6 z-10 text-white text-5xl leading-none" type="button">
+        &times;
+    </button>
 
-            {{ if images }}
-                <div class="photos-section mx-4 space-y-2">
-                    <div class="grid grid-cols-1 md:grid-cols-2 w-full lg:w-9/12 gap-[20px] place-self-center items-center">
-                        {{ images }}
-                            <img
-                                class="w-full rounded-lg"
-                                src="{{ glide :src="url" fit="crop_focal" }}"
-                                alt="{{ alt ?? title }}"
-                            >
-                        {{ /images }}
-                    </div>
-                </div>
-            {{ /if }}
-
-            {{ if video }}
-                <div class="videos-section mt-4 mx-4">
-                    <div class="w-full place-self-center space-y-6">
-                        {{ video }}
-                            <video class="w-full rounded-lg" controls>
-                                <source src="{{ url }}">
-                                Your browser does not support the video tag.
-                            </video>
-                        {{ /video }}
-                    </div>
-                </div>
-            {{ /if }}
-
-        {{ /if }}
-        
-    {{ /content_field }}
-
-    <div class="w-full grid place-content-center container mt-20 mb-70">
-    <div class="text-center w-full md:w-8/12 mx-auto  space-y-3">
-            <h2 class="!font-black">{{ stat1 }}</h2>
-            <h4>{{ stat2 }}</h4>
-    </div>
-    </div>
-
+    <div class="grid h-full place-items-center">
+        <video id="video-lightbox-video" class="max-h-[85vh] w-full max-w-6xl rounded-lg" controls playsinline></video>
     </div>
 </div>
+
+<script>
+document.addEventListener('click', function (event) {
+    const trigger = event.target.closest('.video-lightbox-trigger');
+    const lightbox = document.getElementById('video-lightbox');
+    const lightboxVideo = document.getElementById('video-lightbox-video');
+    const closeButton = document.getElementById('video-lightbox-close');
+
+    if (!lightbox || !lightboxVideo || !closeButton) return;
+
+    if (trigger) {
+        const videoUrl = trigger.getAttribute('data-video');
+
+        if (!videoUrl) return;
+
+        lightboxVideo.src = videoUrl;
+        lightbox.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        lightboxVideo.play();
+    }
+
+    if (
+        event.target === closeButton ||
+        event.target === lightbox
+    ) {
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+        lightbox.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+    }
+});
+</script>

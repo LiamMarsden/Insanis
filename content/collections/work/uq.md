@@ -6,7 +6,7 @@ feature_image: institutional-trust--university-of-queensland.png
 proof: 'Institutional Trust'
 callout: '$607M  raised'
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774769535
+updated_at: 1777904699
 highlight: '$607M  raised'
 banner_image: institutional-trust--university-of-queensland.png
 banner_header: 'Not if, when.'
@@ -132,32 +132,12 @@ content_field:
     type: copy
     enabled: true
   -
-    id: mnbfxefb
-    video: uq-if-not-when-philanthropy_2017.mp4
-    type: assets
-    enabled: true
-  -
-    id: mnbfwsnd
-    content_copy:
-      -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 1
-        content:
-          -
-            type: text
-            text: "$607M raised\_"
-      -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 3
-        content:
-          -
-            type: text
-            text: '$500M target exceeded two years early'
-    type: copy
+    id: moraf57r
+    thumbnail: institutional-trust--university-of-queensland.png
+    video_asset: uq-if-not-when-philanthropy_2017.mp4
+    media_width: full
+    media_ratio: video
+    type: media_items
     enabled: true
 assets:
   -
@@ -166,4 +146,23 @@ assets:
     type: new_set
     enabled: true
 callout_support: '$500M target exceeded two years early'
+video_asset: uq-heading-video.mp4
+stat1:
+  -
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: "$607M raised\_"
+stat2:
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: '$500M target exceeded two years early'
 ---

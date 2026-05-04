@@ -6,9 +6,9 @@ feature_image: behaviour-change--energex.png
 proof: 'Behaviour Change'
 callout: '35% reduction in powerline contacts'
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1777204577
+updated_at: 1777904087
 highlight: 'Lowest incidents on record'
-banner_image: 'energex--if-you-could-see-the-danger,-you-would-stop-yourself.jpg'
+banner_image: energex-heading-video-1777895926.mp4
 banner_header: 'If you could see the danger, you would stop yourself.'
 idea: |-
   Make invisible electrical exclusion zones visible.  
@@ -107,9 +107,36 @@ content_field:
     type: copy
     enabled: true
   -
-    id: mnbfubq3
-    video: energex-gutters.mp4
-    type: assets
+    id: mor763lm
+    media_width: half
+    media_ratio: video
+    type: media_items
+    enabled: true
+    thumbnail: energex-thumbnail-1.png
+    video_asset: energex-heading-home.mp4
+  -
+    id: mor78xz2
+    thumbnail: energex-thumbnail-2.png
+    video_asset: energex-power-point.mp4
+    media_width: half
+    media_ratio: video
+    type: media_items
+    enabled: true
+  -
+    id: mor79bee
+    thumbnail: energex-thumbnail-3.png
+    video_asset: energex-gutters.mp4
+    media_width: half
+    media_ratio: video
+    type: media_items
+    enabled: true
+  -
+    id: mor79ltw
+    thumbnail: energex-thumbnail-4.png
+    video_asset: energex-jogger.mp4
+    media_width: half
+    media_ratio: video
+    type: media_items
     enabled: true
 stat1:
   -
@@ -137,5 +164,6 @@ stat2:
       -
         type: text
         text: '7 industry awards'
+video_asset: energex-heading-video-1777895926.mp4
 ---
 A series of television commercials placed viewers inside everyday situations where electrical danger was hidden in plain sight. Stories covered home renovation, agriculture, storm damage and work near overhead powerlines. The campaign ran across TV, outdoor, radio, print and digital.

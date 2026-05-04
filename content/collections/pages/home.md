@@ -18,7 +18,7 @@ accordion_set:
     type: accordion_set
     enabled: true
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1777205112
+updated_at: 1777895353
 b1_image: 'Asset 1.png'
 b1_header: 'Banner one Header'
 b1_body_copy: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
@@ -268,6 +268,7 @@ workshowcase_field:
     enabled: true
     proof: 'Category Launch'
     image: category-launch--set-for-life.png
+video_asset: insanis--hero-video_noheadline.mp4
 ---
 ## Welcome to your brand new Statamic site!
 

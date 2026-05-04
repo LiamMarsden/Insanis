@@ -8,7 +8,7 @@ callout: |-
   160+ Australians 
   Set for Life
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774769815
+updated_at: 1777905694
 highlight: 'Australia’s first new lottery in 30 years'
 banner_image: category-launch--set-for-life.png
 banner_header: 'Australia’s first new  lottery in 30 years.'
@@ -118,47 +118,33 @@ content_field:
     type: copy
     enabled: true
   -
-    id: mnbg2x95
-    video: the-lott-set-for-life.mp4
-    type: assets
+    id: morawd0y
+    media_width: full
+    media_ratio: video
+    type: media_items
+    enabled: true
+    thumbnail: set4life-thumbnail-1.png
+    video_asset: set-for-life.mp4
+  -
+    id: morb1o0i
+    image: setforlife-logo.png
+    media_width: third
+    media_ratio: square
+    type: media_items
     enabled: true
   -
-    id: mnbg361c
-    images: setforlife-logo.png
-    type: assets
+    id: morb1yo5
+    image: set-for-live-brand.jpg
+    media_width: two_thirds
+    media_ratio: video
+    type: media_items
     enabled: true
   -
-    id: mnbg3gpp
-    images: set-for-live-brand.jpg
-    type: assets
-    enabled: true
-  -
-    id: mnbg3oes
-    images: set-for-live-launch.jpg
-    type: assets
-    enabled: true
-  -
-    id: mnbg3zmy
-    content_copy:
-      -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 2
-        content:
-          -
-            type: text
-            text: "160+ Australians\_Set for Life"
-      -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 3
-        content:
-          -
-            type: text
-            text: '$166M+ paid to winners'
-    type: copy
+    id: morb2h2z
+    image: set-for-live-launch.jpg
+    media_width: full
+    media_ratio: video
+    type: media_items
     enabled: true
 assets:
   -
@@ -182,4 +168,23 @@ assets:
     type: new_set
     enabled: true
 callout_support: '$166M+ paid to winners'
+video_asset: set-for-life.mp4
+stat1:
+  -
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: "160+ Australians\_Set for Life"
+stat2:
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: '$166M+ paid to winners'
 ---

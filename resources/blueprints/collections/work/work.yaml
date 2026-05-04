@@ -34,12 +34,17 @@ tabs:
         display: Contents
         fields:
           -
-            handle: banner_image
+            handle: video_asset
             field:
               max_files: 1
               container: assets
               type: assets
-              display: 'Banner Image'
+              display: 'Local Video'
+          -
+            handle: video_url
+            field:
+              type: text
+              display: 'Video URL'
           -
             handle: banner_header
             field:
@@ -86,24 +91,71 @@ tabs:
                             remove_empty_nodes: false
                             type: bard
                             display: Content
-                    assets:
-                      display: Assets
+                    media_items:
+                      display: media_items
                       icon: media-image-picture-orientation
                       fields:
                         -
-                          handle: images
+                          handle: image
                           field:
                             max_files: 1
                             container: assets
                             type: assets
-                            display: Images
+                            display: image
                         -
-                          handle: video
+                          handle: thumbnail
                           field:
                             max_files: 1
                             container: assets
                             type: assets
-                            display: Video
+                            display: thumbnail
+                        -
+                          handle: video_asset
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: 'Local Video'
+                        -
+                          handle: video_url
+                          field:
+                            type: text
+                            display: 'Video URL'
+                        -
+                          handle: media_width
+                          field:
+                            options:
+                              -
+                                key: full
+                                value: Full
+                              -
+                                key: half
+                                value: Half
+                              -
+                                key: third
+                                value: Third
+                              -
+                                key: two_thirds
+                                value: 'Two Thirds'
+                            default: full
+                            type: select
+                            display: width
+                        -
+                          handle: media_ratio
+                          field:
+                            options:
+                              -
+                                key: square
+                                value: Square
+                              -
+                                key: video
+                                value: Video
+                              -
+                                key: portrait
+                                value: Portrait
+                            default: video
+                            type: select
+                            display: 'Aspect Ratio'
       -
         display: Stats
         fields:

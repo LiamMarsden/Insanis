@@ -8,7 +8,7 @@ callout: |-
   28% increase in 
   Quitline calls
 updated_by: d7398260-62ae-4ee2-911b-6eb37e6cca0d
-updated_at: 1774769683
+updated_at: 1777905103
 highlight: 'Record Quitline calls'
 banner_image: public-health--qld-health.png
 banner_header: 'All By Myself.'
@@ -106,47 +106,33 @@ content_field:
     type: copy
     enabled: true
   -
-    id: mnbg094e
-    video: qld-health--all-by-myself.mp4
-    type: assets
+    id: moralqeo
+    thumbnail: public-health--qld-health.png
+    video_asset: qld-health--all-by-myself.mp4
+    media_width: full
+    media_ratio: video
+    type: media_items
     enabled: true
   -
-    id: mnbg0j5u
-    images: qld-healh-ooh-1.jpg
-    type: assets
+    id: morame9e
+    image: qld-healh-ooh-1.jpg
+    media_width: third
+    media_ratio: portrait
+    type: media_items
     enabled: true
   -
-    id: mnbg0pa3
-    images: qld-healh-ooh-2.jpg
-    type: assets
+    id: moramrs1
+    image: qld-healh-ooh-2.jpg
+    media_width: third
+    media_ratio: portrait
+    type: media_items
     enabled: true
   -
-    id: mnbg0vg8
-    images: qld-healh-ooh-3.jpg
-    type: assets
-    enabled: true
-  -
-    id: mnbg1349
-    content_copy:
-      -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 2
-        content:
-          -
-            type: text
-            text: "28% increase in\_Quitline calls"
-      -
-        type: heading
-        attrs:
-          textAlign: center
-          level: 3
-        content:
-          -
-            type: text
-            text: '93.5% of callers cited the campaign'
-    type: copy
+    id: moran1f1
+    image: qld-healh-ooh-3.jpg
+    media_width: third
+    media_ratio: portrait
+    type: media_items
     enabled: true
 assets:
   -
@@ -170,4 +156,23 @@ assets:
     type: new_set
     enabled: true
 callout_support: '93.5% of callers cited the campaign'
+stat1:
+  -
+    type: heading
+    attrs:
+      level: 2
+    content:
+      -
+        type: text
+        text: "28% increase in\_Quitline calls"
+stat2:
+  -
+    type: heading
+    attrs:
+      level: 3
+    content:
+      -
+        type: text
+        text: '93.5% of callers cited the campaign'
+video_asset: qld-health-heading-video.mp4
 ---

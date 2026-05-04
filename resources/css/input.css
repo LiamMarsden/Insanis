@@ -50,9 +50,6 @@ p {
   @apply text-xs/40 text-balance;
 }
 
-button {
-  @apply w-fit px-16 py-2 !bg-[var(--object_bg_colour)]/20 hover:!bg-[var(--object_bg_colour)]/70 hover:!ring-2 hover:ring-[var(--primary_colour)] rounded-lg uppercase font-bold;
-}
 
 li, ::placeholder, label {
   @apply !text-[var(--secondary_colour)];
@@ -93,33 +90,6 @@ p {
   @apply !text-[var(--primary_colour)]/40;
 }
 
-button {
-  width: 100%;
-  border-radius: 0.5rem;
-  background-color: rgb(255 255 255 / 0.2);
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  --tw-text-opacity: 1;
-  @apply !text-[var(--primary_colour)];
-  cursor: pointer;
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
-
-button:hover {
-  background-color: rgb(255 255 255 / 0.7);
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity, 1));
-}
 
 nav li {
   height: 100%;

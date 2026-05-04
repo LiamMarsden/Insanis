@@ -18,6 +18,18 @@ tabs:
         fields:
           -
             import: textcentered
+          -
+            handle: video_asset
+            field:
+              max_files: 1
+              container: assets
+              type: assets
+              display: 'Local Video'
+          -
+            handle: video_url
+            field:
+              type: text
+              display: 'Video URL'
       -
         display: Cards
         fields:
