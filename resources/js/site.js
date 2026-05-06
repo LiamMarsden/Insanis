@@ -1,159 +1,26 @@
 // This is all you.
 
-// Burger Menu Start
-                document.addEventListener('DOMContentLoaded', function () {
-                    const toggleButton = document.getElementById('mobile-menu-toggle');
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    const menuIcon = document.getElementById('menu-icon');
-                    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-                    if (!toggleButton || !mobileMenu) return;
-
-                    toggleButton.addEventListener('click', function () {
-                        mobileMenu.classList.toggle('hidden');
-
-                        if (mobileMenu.classList.contains('hidden')) {
-                            menuIcon.textContent = '☰'; // burger
-                        } else {
-                            menuIcon.textContent = '✕'; // cross
-                        }
-                    });
-
-                    mobileLinks.forEach(link => {
-                        link.addEventListener('click', function () {
-                            mobileMenu.classList.add('hidden');
-                            menuIcon.textContent = '☰';
-                        });
-                    });
-                });
-// Burger Menu End
-
-
-// Accordion Start
-
-document.addEventListener('DOMContentLoaded', function () {
-  const accordionHeaders = document.querySelectorAll('.accordion-header');
-
-  accordionHeaders.forEach(header => {
-    const content = header.nextElementSibling;
-
-    // Ensure each content panel starts hidden
-    content.style.maxHeight = '0';
-    content.style.overflow = 'hidden';
-
-    header.addEventListener('click', function () {
-      // Close any currently open items
-      accordionHeaders.forEach(h => {
-        if (h !== this) {
-          h.setAttribute('aria-expanded', 'false');
-          h.nextElementSibling.style.maxHeight = '0';
-        }
-      });
-
-      // Toggle this item
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', !expanded);
-
-      content.style.maxHeight = expanded ? '0' : `${content.scrollHeight}px`;
-    });
-  });
-});
-
-// Accordion End
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', () => {
-  const navLogo = document.querySelector('.nav-logo');
-  const banner = document.querySelector('.banner');
+    const revealText = document.querySelectorAll('.js-text-reveal');
 
-  // Function to toggle the logo visibility based on scroll position
-  function toggleNavLogo() {
-    const bannerBottom = banner.getBoundingClientRect().bottom;
+    if (!revealText.length) return;
 
-    if (bannerBottom <= 0) {
-      // User has scrolled past the banner; show the logo in the nav
-      navLogo.classList.remove('hidden');
-      navLogo.classList.add('block');
-    } else {
-      // User is above the banner; hide the logo in the nav
-      navLogo.classList.remove('block');
-      navLogo.classList.add('hidden');
-    }
-  }
-
-  // Listen for scroll events
-  window.addEventListener('scroll', toggleNavLogo);
-});
-
-
-// slide Start
-
-(function () {
-      const root = document.getElementById('testi');
-      const track = root.querySelector('.track');
-      const viewport = root.querySelector('.relative.overflow-hidden') || track.parentElement;
-      const slides = Array.from(root.querySelectorAll('.slide'));
-      const prev = root.querySelector('.prev');
-      const next = root.querySelector('.next');
-      const dotsWrap = root.querySelector('.dots');
-
-      let index = 0;
-      let slideW = 0;
-
-      // Build dots
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.type = 'button';
-        dot.className = 'h-2 w-2 rounded-full bg-[var(--primary_colour)]/30 hover:bg-[var(--primary_colour)]/60 transition';
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => go(i));
-        dotsWrap.appendChild(dot);
-      });
-
-      function setActiveDot(i) {
-        dotsWrap.querySelectorAll('button').forEach((d, di) => {
-          d.className = 'h-2 w-2 rounded-full transition ' + (di === i ? 'bg-[var(--primary_colour)]' : 'bg-[var(--primary_colour)]/30 hover:bg-[var(--primary_colour)]/60');
+    revealText.forEach((text) => {
+        gsap.from(text, {
+            scrollTrigger: {
+                trigger: text,
+                start: 'top 85%',
+            },
+              filter: "blur(20px)", 
+              opacity: 0, 
+              scale: 0.9,
+              duration: 1, 
+              ease: "power2.out",
         });
-      }
-
-      function measure() {
-        slideW = viewport.clientWidth;                 // width of the visible box
-        slides.forEach(s => s.style.width = slideW+'px'); // prevent sub-pixel drift
-        track.style.transform = `translateX(${-index * slideW}px)`; // snap
-      }
-
-      function go(i) {
-        index = (i + slides.length) % slides.length;
-        track.style.transform = `translateX(${-index * slideW}px)`;
-        setActiveDot(index);
-      }
-
-      prev.addEventListener('click', () => go(index - 1));
-      next.addEventListener('click', () => go(index + 1));
-      window.addEventListener('resize', measure);
-
-      // init
-      measure();
-      setActiveDot(0);
-    })();
-
-// Slide End
-
-// Header Transparent
-
-document.addEventListener("DOMContentLoaded", function() {
-  const header = document.querySelector(".site-header"); // Adjust selector if needed
-
-  window.addEventListener("scroll", function() {
-    if (window.scrollY > 50) { // adjust trigger distance
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-});
-
-// Header Transparent End
-
-document.querySelectorAll('.alt-glyph-auto').forEach(el => {
-  el.innerHTML = el.innerHTML.replace(/W/g, '<span class="alt-glyph">W</span>');
+    });
 });
