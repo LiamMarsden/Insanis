@@ -24,3 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+// Burger Menu Start
+                document.addEventListener('DOMContentLoaded', function () {
+                    const toggleButton = document.getElementById('mobile-menu-toggle');
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    const menuIcon = document.getElementById('menu-icon');
+                    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+
+                    if (!toggleButton || !mobileMenu) return;
+
+                    toggleButton.addEventListener('click', function () {
+                        mobileMenu.classList.toggle('hidden');
+
+                        if (mobileMenu.classList.contains('hidden')) {
+                            menuIcon.textContent = '☰'; // burger
+                        } else {
+                            menuIcon.textContent = '✕'; // cross
+                        }
+                    });
+
+                    mobileLinks.forEach(link => {
+                        link.addEventListener('click', function () {
+                            mobileMenu.classList.add('hidden');
+                            menuIcon.textContent = '☰';
+                        });
+                    });
+                });
+// Burger Menu End

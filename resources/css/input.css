@@ -19,7 +19,7 @@
 }
 
 h1 {
-  @apply text-9xl md:text-[13vw] font-black;
+  @apply text-8xl/18 md:text-[13vw] font-black;
 }
 
 h2 {
