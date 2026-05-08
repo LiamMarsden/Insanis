@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
                 trigger: text,
                 start: 'top 85%',
+                markers: false,
+                toggleActions: 'play reverse play reverse',
             },
               filter: "blur(20px)", 
               opacity: 0, 
