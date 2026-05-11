@@ -1,5 +1,5 @@
 
-<div class="overflow-hidden flex top-0 border-b-6 border-[var(--secondary_colour)]">
+<div class="overflow-hidden flex top-0 border-b-6 border-(--secondary_colour)">
 {{ if banner_video | is_embeddable }}
     <!-- Youtube and Vimeo -->
     <iframe class="w-full aspect-video" src="{{ banner_video | embed_url }}"></iframe>
